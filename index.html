@@ -1,31 +1,75 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>my page</title>
-		<style type="text/css">
-			p {
-				text-align: left;
-				font-size: 25px;
-				color: darkred;
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Second Page</title>
+	<style type="text/css">
+		li { 
+			font-size: 20px;
+			list-style: none;
+			font-family: sans-serif;
+		}
+		div {
+			margin-top: 150px;
+			margin-left: 150px;
+		}
+
+		body{ 
+		     height: 600px;
+		     background-repeat: no-repeat;
+		     background-position: center;
+		     overflow-y: hidden;
+		}
+		.hide {
+			display: none;
+		}
+
+		.fade {
+			animation: ease-in 0.5s;
+		}
+
+		div.main h1:hover{ 
+			color: darkred; 
+			transition: 1s; 
+			transform: translateX(50px);
+		}
+	
+	</style>	
+</head>
+<body style="background-image: url('vignesh.jpg');">
+	<div class="main" onclick="setup()">
+		<h1 style="font-size: 100px;">Hello</h1>
+		<h1 style="font-size: 100px; padding-top: 0px;">I am</h1>
+		<h1 style="font-size: 100px; color: darkred;">Vignesh</h1>
+	</div>
+	<div class="sub hide" onclick="setup()">
+			<h1><b>Personal Details</b></h1>
+			<ul>
+				<li><b>Birth:</b> 3rd April 2003</li>
+				<li><b>Height/Weight:</b> 180cm/97kg</li>
+				<li><b>Religion:</b> G.S.B Hindu</li>
+				<li><b>Native:</b> Kasargod</li>
+				<li><b>Resident:</b> Mangalore</li>
+			</ul>
+			<h1>Education</h1>
+			<ul>
+				<li>B.Tech (2021-2025)</li>
+			</ul>
+			<h1>Interests</h1>
+			<ul>
+				<li><b>Interest 1:</b> Swimming, Cycling</li>
+				<li><b>Interest 2:</b> Cricket, Badminton</li>
+				<li><b>Interest 3:</b> Shopkeeping</li>
+			</ul>
+		</div>
+		<p style="font-size: small; text-align: center;"><b>Click on Vignesh to see magic!!</b></p>
+		<script>
+			function setup() {
+				document.querySelector('.sub').classList.toggle('hide');
+				document.querySelector('.sub').classList.toggle('fade');
+				document.querySelector('.main').classList.toggle('hide');
 			}
-			img {
-				display: block;
-				margin: 0 auto;
-			} 
-		</style>
-	</head>
-	<body style="background-color: lightyellow;">
-		<h1 style="text-align: center;">ABOUT YASHAS</h1>
-		<img src="yashas.jpg" height="550" />
-		<p style="margin-left: 100px;"><i><b>NAME:</b> YASHAS.N.RAO</i></p>
-		<p style="margin-left: 100px;"><i><b>CLASSIFICATION:</b> 10TH PASS</i></p>
-		<p style="margin-left: 100px;"><i><b>AGE:</b>16</i></p>
-		<p style="text-align:right; margin-right: 100px;"><i><b>ADDRESS:</b> SWASTIK SADAN, YEDAPADAVU</i></p>
-		<p style="text-align:right; margin-right: 100px;"><i><b>FATHER'S NAME:</b> NARESH RAO</i></p>
-		<p style="text-align:right; margin-right: 100px;"><i><b>D.O.B:</b> 20/10/2006</i></p>
-
-	</body>
-
+		</script>
+</body>
 </html>
